@@ -1,7 +1,7 @@
-package main;
+package gameLogic;
 
-import main.Ship.Rotation;
-import main.Ship.ShipType;
+import gameLogic.Ship.Rotation;
+import gameLogic.Ship.ShipType;
 
 public class Board {
     private final Ship[][] board;
@@ -17,6 +17,14 @@ public class Board {
 
     public Ship getSpace(int colX, int rowY) {
         return board[rowY][colX];
+    }
+
+    public void hit(int colX, int rowY) {
+        board[rowY][colX].setHit();
+    }
+
+    public void miss(int colX, int rowY) {
+        board[rowY][colX].setMiss();
     }
 
     public boolean addShip(Ship ship) {

@@ -4,9 +4,11 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
- import main.*;
+ import gameLogic.Ship;
+ import gameLogic.Ship.ShipType;
+import graphicsManager.GamePanel;
 
-public class TileManager {
+ public class TileManager {
     private final GamePanel gp;
 
     private final SpriteManager sm;
@@ -26,7 +28,7 @@ public class TileManager {
         rotationToInt.put(Ship.Rotation.RIGHT, 2);
     }
 
-    public void draw(Graphics2D g2d) {
+    public void drawPlayer(Graphics2D g2d) {
         for (int row = 0; row < gp.maxBoardRow; row++) {
             for (int col = 0; col < gp.maxBoardCol; col++) {
                 // Water tiles being drawn on.
@@ -42,25 +44,56 @@ public class TileManager {
                 Ship ship = gp.gameBoard.getSpace(col, row);
 
                 // Ship tiles being drawn on.
-                if (ship.getShipType() != Ship.ShipType.EMPTY) {
+                if (ship.getShipType() != ShipType.EMPTY) {
                     BufferedImage shipTileImg;
 
-                    if (ship.getShipType() == Ship.ShipType.DESTROYER)
+                    if (ship.getShipType() == ShipType.DESTROYER)
                         shipTileImg = sm.destroyerTileSet[ship.getShipSection()];
-                    else if (ship.getShipType() == Ship.ShipType.CRUISER)
+                    else if (ship.getShipType() == ShipType.CRUISER)
                         shipTileImg = sm.cruiserTileSet[ship.getShipSection()];
-                    else if (ship.getShipType() == Ship.ShipType.SUBMARINE)
+                    else if (ship.getShipType() == ShipType.SUBMARINE)
                         shipTileImg = sm.submarineTileSet[ship.getShipSection()];
-                    else if (ship.getShipType() == Ship.ShipType.BATTLESHIP)
+                    else if (ship.getShipType() == ShipType.BATTLESHIP)
                         shipTileImg = sm.battleshipTileSet[ship.getShipSection()];
-                    else if (ship.getShipType() == Ship.ShipType.CARRIER)
+                    else if (ship.getShipType() == ShipType.CARRIER)
                         shipTileImg = sm.carrierTileSet[ship.getShipSection()];
                     else
                         shipTileImg = null;
 
-                    g2d.drawImage(rotate(shipTileImg, rotationToInt.get(ship.getRotation())*-90), row*gp.scaledTileSize, col*gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+                    assert shipTileImg != null;
+                    if (ship.wasHit()) {
+                        g2d.drawImage(rotate(shipTileImg, rotationToInt.get(ship.getRotation()) * -85), row * gp.scaledTileSize, col * gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+                        g2d.drawImage(sm.indicatorTileSet[1], row*gp.scaledTileSize, col*gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+                    }
+                    else
+                        g2d.drawImage(rotate(shipTileImg, rotationToInt.get(ship.getRotation())*-90), row*gp.scaledTileSize, col*gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
                 }
-                // TODO indicator tiles being drawn on.
+
+                if (ship.wasMiss())
+                    g2d.drawImage(sm.indicatorTileSet[0], row*gp.scaledTileSize, col*gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+            }
+        }
+    }
+
+    public void drawComp(Graphics2D g2d) {
+        for (int row = 0; row < gp.maxBoardRow; row++) {
+            for (int col = 0; col < gp.maxBoardCol; col++) {
+                // Water tiles being drawn on.
+                if (waterFrame == 0)
+                    g2d.drawImage(sm.waterTileSet[0], row * gp.scaledTileSize, col * gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+                else if (waterFrame == 1)
+                    g2d.drawImage(sm.waterTileSet[1], row * gp.scaledTileSize, col * gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+                else if (waterFrame == 2)
+                    g2d.drawImage(sm.waterTileSet[2], row * gp.scaledTileSize, col * gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+                else if (waterFrame == 3)
+                    g2d.drawImage(sm.waterTileSet[3], row * gp.scaledTileSize, col * gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+
+                Ship ship = gp.gameBoard.getSpace(col, row);
+
+                if (ship.wasMiss())
+                    g2d.drawImage(sm.indicatorTileSet[0], row*gp.scaledTileSize, col*gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+                else if (ship.wasHit())
+                    g2d.drawImage(sm.indicatorTileSet[2], row*gp.scaledTileSize, col*gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
             }
         }
     }

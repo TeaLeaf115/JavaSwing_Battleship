@@ -1,5 +1,3 @@
-package main;
-
 import javax.swing.*;
 
 import java.awt.image.BufferedImage;
@@ -8,6 +6,7 @@ import java.io.*;
 
 import javax.imageio.ImageIO;
 
+import graphicsManager.GamePanel;
 import tile.SpriteSheetReader;
 
 public class Main {

@@ -34,8 +34,8 @@ public class SpriteManager {
         carrierTileSet = Arrays.copyOfRange(tileSet, 18, 24);
 
         indicatorTileSet = new BufferedImage[3];
-        indicatorTileSet[0] = tileSet[4];
-        indicatorTileSet[1] = tileSet[5];
+        indicatorTileSet[0] = tileSet[5];
+        indicatorTileSet[1] = tileSet[4];
         indicatorTileSet[2] = tileSet[23];
     }
 }

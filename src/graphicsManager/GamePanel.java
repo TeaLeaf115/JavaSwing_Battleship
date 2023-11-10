@@ -1,4 +1,4 @@
- package main;
+ package graphicsManager;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -7,8 +7,10 @@ import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
- import main.Ship.Rotation;
- import main.Ship.ShipType;
+import gameLogic.Board;
+import gameLogic.Ship;
+import gameLogic.Ship.Rotation;
+ import gameLogic.Ship.ShipType;
 
  import tile.TileManager;
 
@@ -85,6 +87,8 @@ public class GamePanel extends JPanel implements Runnable {
     public void update() {
         gameBoard.addShip(new Ship(2, 2, ShipType.CARRIER, 0, Rotation.RIGHT));
         gameBoard.addShip(new Ship(2, 5, ShipType.DESTROYER, 0, Rotation.DOWN));
+        gameBoard.hit(2, 5);
+        gameBoard.miss(0, 0);
         tileM.update();
     }
 
@@ -92,7 +96,7 @@ public class GamePanel extends JPanel implements Runnable {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
 
-        tileM.draw(g2d);
+        tileM.drawPlayer(g2d);
 
         g.setColor(new Color(0, 0, 0, 81));
         for (int i = 48; i < 480; i+=48) {

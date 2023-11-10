@@ -1,10 +1,11 @@
- package main;
+ package gameLogic;
 
 public class Ship {
     private int xPos;
     private int yPos;
 
     private boolean wasHit;
+    private boolean isMiss;
 
     public enum ShipType {
         EMPTY, DESTROYER, CRUISER, SUBMARINE, BATTLESHIP, CARRIER
@@ -32,6 +33,7 @@ public class Ship {
         this.isEmpty = true;
 
         this.wasHit = false;
+        this.isMiss = false;
     }
 
     public Ship(int xPos, int yPos, ShipType shipType, int shipSection, Rotation rotation) {
@@ -45,6 +47,7 @@ public class Ship {
         this.isEmpty = false;
 
         this.wasHit = false;
+        this.isMiss = false;
     }
 
     // GETTERS
@@ -59,6 +62,10 @@ public class Ship {
 
     public boolean wasHit() {
         return wasHit;
+    }
+
+    public boolean wasMiss() {
+        return isMiss;
     }
 
     public ShipType getShipType() {
@@ -104,8 +111,12 @@ public class Ship {
         this.yPos = yPos;
     }
 
-    public void setHit(boolean wasHit) {
-        this.wasHit = wasHit;
+    public void setHit() {
+        this.wasHit = true;
+    }
+
+    public void setMiss() {
+        this.isMiss = true;
     }
 
     public void setRotation(Rotation rotation) {
