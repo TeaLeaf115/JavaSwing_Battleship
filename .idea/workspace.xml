@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa86c4dc-4b85-41f0-a486-9749c85a469e" name="Changes" comment="Created">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/BattleshipSpritesheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Ship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile/SpriteManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile/SpriteSheetReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-    </list>
+    <list default="true" id="aa86c4dc-4b85-41f0-a486-9749c85a469e" name="Changes" comment="Created" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696991325343</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created">
+      <created>1699579055449</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699579055449</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
