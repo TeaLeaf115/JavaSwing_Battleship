@@ -25,7 +25,7 @@ public class SpriteSheetReader {
             this.spriteSheet = ImageIO.read(new File(fileName));
         }
         catch (IOException e) {
-            System.out.println("Error: " + e);
+			e.printStackTrace();
         }
 
         this.tileWidth = tileWidth;

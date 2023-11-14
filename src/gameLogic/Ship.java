@@ -1,4 +1,4 @@
- package gameLogic;
+package gameLogic;
 
 public class Ship {
     private int xPos;
