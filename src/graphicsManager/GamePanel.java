@@ -113,7 +113,7 @@ public class GamePanel extends JPanel implements Runnable {
 //			g.drawLine(0, i, boardWidth, i);
 //		}
 
-		gui.draw(g2d);
+		gui.drawGameBoard(g2d);
 
 		g2d.dispose();
 	}

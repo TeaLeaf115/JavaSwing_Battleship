@@ -14,21 +14,27 @@ public class GUI {
 
 // 	private final SpriteManager sm;
 
-	private BufferedImage boardCover;
+	private BufferedImage gameBoardCover;
+	private BufferedImage shipPlacementScreen;
 
 	public GUI(GamePanel gp) {
 		this.gp = gp;
 
 		try {
-			boardCover = ImageIO.read(new File("res/images/GUI_v1.png"));
+			gameBoardCover = ImageIO.read(new File("res/images/GUI_v1.png"));
+			shipPlacementScreen = ImageIO.read(new File("res/images/ShipPlacementScreen.png"));
 		}
 		catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void draw(Graphics2D g2d) {
-		g2d.drawImage(boardCover, 0, 0, (int) (getBoardCoverWidth() * gp.spriteScaleMultiplier), (int) (getBoardCoverHeight() * gp.spriteScaleMultiplier), null);
+	public void drawGameBoard(Graphics2D g2d) {
+		g2d.drawImage(gameBoardCover, 0, 0, (int) (getBoardCoverWidth() * gp.spriteScaleMultiplier), (int) (getBoardCoverHeight() * gp.spriteScaleMultiplier), null);
+	}
+
+	public void drawShipPlacementScreen(Graphics2D g2d) {
+		g2d.drawImage(shipPlacementScreen, 0, 0, (int) (getBoardCoverWidth() * gp.spriteScaleMultiplier), (int) (getBoardCoverHeight() * gp.spriteScaleMultiplier), null);
 	}
 
 	public void update() {
@@ -36,10 +42,10 @@ public class GUI {
 	}
 
 	public int getBoardCoverWidth() {
-		return boardCover.getWidth();
+		return gameBoardCover.getWidth();
 	}
 
 	public int getBoardCoverHeight() {
-		return boardCover.getHeight();
+		return gameBoardCover.getHeight();
 	}
 }
