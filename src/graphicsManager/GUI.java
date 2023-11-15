@@ -1,12 +1,11 @@
 package graphicsManager;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
 import java.awt.image.BufferedImage;
-
-import java.awt.Graphics2D;
 
 import graphicsManager.GamePanel;
 
@@ -29,7 +28,7 @@ public class GUI {
 	}
 
 	public void draw(Graphics2D g2d) {
-		g2d.drawImage(boardCover, 0, 0, gp.scaledTileSize, gp.scaledTileSize, null);
+		g2d.drawImage(boardCover, 0, 0, (int) (getBoardCoverWidth() * gp.spriteScaleMultiplier), (int) (getBoardCoverHeight() * gp.spriteScaleMultiplier), null);
 	}
 
 	public void update() {

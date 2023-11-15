@@ -32,14 +32,17 @@ import graphicsManager.GamePanel;
 		for (int row = 0; row < gp.maxBoardRow; row++) {
 			for (int col = 0; col < gp.maxBoardCol; col++) {
 				// Water tiles being drawn on.
+				int tileX = (row * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize);
+				int tileY = (col * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize);
+
 				if (waterFrame == 0)
-					g2d.drawImage(sm.waterTileSet[0], (row * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize), (col * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize), gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.waterTileSet[0], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 				else if (waterFrame == 1)
-					g2d.drawImage(sm.waterTileSet[1], (row * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize), (col * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize), gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.waterTileSet[1], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 				else if (waterFrame == 2)
-					g2d.drawImage(sm.waterTileSet[2], (row * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize), (col * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize), gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.waterTileSet[2], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 				else if (waterFrame == 3)
-					g2d.drawImage(sm.waterTileSet[3], (row * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize), (col * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize), gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.waterTileSet[3], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 
 				Ship ship = gp.playerBoard.getSpace(col, row);
 
@@ -63,14 +66,14 @@ import graphicsManager.GamePanel;
 					assert shipTileImg != null;
 					if (ship.wasHit()) {
 						g2d.drawImage(rotate(shipTileImg, rotationToInt.get(ship.getRotation()) * -85), row * gp.scaledTileSize, col * gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
-						g2d.drawImage(sm.indicatorTileSet[1], (row * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize), (col * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize), gp.scaledTileSize, gp.scaledTileSize, null);
+						g2d.drawImage(sm.indicatorTileSet[1], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 					}
 					else
-						g2d.drawImage(rotate(shipTileImg, rotationToInt.get(ship.getRotation())*-90), (row * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize), (col * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize), gp.scaledTileSize, gp.scaledTileSize, null);
+						g2d.drawImage(rotate(shipTileImg, rotationToInt.get(ship.getRotation())*-90), tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 				}
 
 				if (ship.wasMiss())
-					g2d.drawImage(sm.indicatorTileSet[0], (row * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize), (col * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize), gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.indicatorTileSet[0], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 			}
 		}
 	}
@@ -79,21 +82,24 @@ import graphicsManager.GamePanel;
 		for (int row = 0; row < gp.maxBoardRow; row++) {
 			for (int col = 0; col < gp.maxBoardCol; col++) {
 				// Water tiles being drawn on.
+				int tileX = (row * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize);
+				int tileY = (col * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize);
+
 				if (waterFrame == 0)
-					g2d.drawImage(sm.waterTileSet[0], row * gp.scaledTileSize, col * gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.waterTileSet[0], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 				else if (waterFrame == 1)
-					g2d.drawImage(sm.waterTileSet[1], row * gp.scaledTileSize, col * gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.waterTileSet[1], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 				else if (waterFrame == 2)
-					g2d.drawImage(sm.waterTileSet[2], row * gp.scaledTileSize, col * gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.waterTileSet[2], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 				else if (waterFrame == 3)
-					g2d.drawImage(sm.waterTileSet[3], row * gp.scaledTileSize, col * gp.scaledTileSize, gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.waterTileSet[3], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 
 				Ship ship = gp.compBoard.getSpace(col, row);
 
 				if (ship.wasMiss())
-					g2d.drawImage(sm.indicatorTileSet[0], (row * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize), (col * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize), gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.indicatorTileSet[0], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 				else if (ship.wasHit())
-					g2d.drawImage(sm.indicatorTileSet[2], (row * gp.scaledTileSize) + (tileYOffset * gp.scaledTileSize), (col * gp.scaledTileSize) + (tileXOffset * gp.scaledTileSize), gp.scaledTileSize, gp.scaledTileSize, null);
+					g2d.drawImage(sm.indicatorTileSet[2], tileX, tileY, gp.scaledTileSize, gp.scaledTileSize, null);
 			}
 		}
 	}

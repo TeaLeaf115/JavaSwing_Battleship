@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa86c4dc-4b85-41f0-a486-9749c85a469e" name="Changes" comment="Snail.">
+    <list default="true" id="aa86c4dc-4b85-41f0-a486-9749c85a469e" name="Changes" comment="Added indication tiles (Hit player perspective, hit computer perspective) and miss, to the board.">
+      <change afterPath="$PROJECT_DIR$/src/gameLogic/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gameLogic/PlayerAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicsManager/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/SpriteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/SpriteManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphicsManager/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicsManager/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphicsManager/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicsManager/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -30,6 +30,13 @@
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="00c258ee-aa97-482c-a411-28d1949b24c4" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -65,7 +72,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.gameLogic.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699579305291</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added indication tiles (Hit player perspective, hit computer perspective) and miss, to the board.">
+      <created>1699653028631</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699653028631</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,7 +138,8 @@
     <MESSAGE value="Created" />
     <MESSAGE value="Got rid of old unused class Grid.java" />
     <MESSAGE value="Snail." />
-    <option name="LAST_COMMIT_MESSAGE" value="Snail." />
+    <MESSAGE value="Added indication tiles (Hit player perspective, hit computer perspective) and miss, to the board." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added indication tiles (Hit player perspective, hit computer perspective) and miss, to the board." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
