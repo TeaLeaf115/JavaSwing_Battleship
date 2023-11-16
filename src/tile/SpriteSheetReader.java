@@ -54,9 +54,9 @@ public class SpriteSheetReader {
         return spriteArray;
     }
 
-    public BufferedImage getSpriteFromSheet(int row, int col, int spriteWidth, int spriteHeight) throws IOException {
+    public BufferedImage getSpriteFromSheet(int row, int col, int spriteWidth, int spriteHeight) {
         if (row * tileWidth >= spriteSheet.getWidth() || col * tileHeight >= spriteSheet.getHeight() || row < 0 || col < 0)
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("There was an issue with grabbing the sprite you wanted.");
 
         return spriteSheet.getSubimage(col*tileHeight, row*tileWidth, spriteWidth, spriteHeight);
     }

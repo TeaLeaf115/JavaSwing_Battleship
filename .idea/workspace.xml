@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa86c4dc-4b85-41f0-a486-9749c85a469e" name="Changes" comment="Added indication tiles (Hit player perspective, hit computer perspective) and miss, to the board.">
-      <change afterPath="$PROJECT_DIR$/src/gameLogic/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gameLogic/PlayerAction.java" afterDir="false" />
+    <list default="true" id="aa86c4dc-4b85-41f0-a486-9749c85a469e" name="Changes" comment="Fixed the game board's GUI, and have started to add the beginnings for mouse interactions. This is the last WIP commit to the master branch.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameLogic/PlayerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/PlayerAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphicsManager/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicsManager/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphicsManager/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicsManager/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/SpriteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/SpriteManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/SpriteSheetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/SpriteSheetReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699653028631</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed the game board's GUI, and have started to add the beginnings for mouse interactions. This is the last WIP commit to the master branch.">
+      <created>1700014000606</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700014000606</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,7 +146,8 @@
     <MESSAGE value="Got rid of old unused class Grid.java" />
     <MESSAGE value="Snail." />
     <MESSAGE value="Added indication tiles (Hit player perspective, hit computer perspective) and miss, to the board." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added indication tiles (Hit player perspective, hit computer perspective) and miss, to the board." />
+    <MESSAGE value="Fixed the game board's GUI, and have started to add the beginnings for mouse interactions. This is the last WIP commit to the master branch." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the game board's GUI, and have started to add the beginnings for mouse interactions. This is the last WIP commit to the master branch." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

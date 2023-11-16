@@ -102,8 +102,8 @@ public class GamePanel extends JPanel implements Runnable {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 
-		tileM.drawPlayer(g2d, 8, 3);
-		tileM.drawComp(g2d, 8, 15);
+//		tileM.drawPlayer(g2d, 8, 3);
+//		tileM.drawComp(g2d, 8, 15);
 
 //		g.setColor(new Color(0, 0, 0, 81));
 //		for (int i = 48; i < 480; i+=48) {
@@ -113,7 +113,8 @@ public class GamePanel extends JPanel implements Runnable {
 //			g.drawLine(0, i, boardWidth, i);
 //		}
 
-		gui.drawGameBoard(g2d);
+//		gui.drawGameBoard(g2d);
+		gui.drawShipPlacementScreen(g2d);
 
 		g2d.dispose();
 	}

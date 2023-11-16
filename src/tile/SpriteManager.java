@@ -7,6 +7,9 @@ import java.util.Arrays;
 import java.io.IOException;
 
 public class SpriteManager {
+
+    private final SpriteSheetReader ssr;
+
     private BufferedImage[] tileSet;
     public final BufferedImage[] waterTileSet;
 
@@ -18,8 +21,10 @@ public class SpriteManager {
 
     public final BufferedImage[] indicatorTileSet;
 
+    public final BufferedImage[] fullShipSprites;
+
     public SpriteManager() {
-        SpriteSheetReader ssr = new SpriteSheetReader("res/images/BattleshipSpritesheet.png", 16, 16);
+        ssr = new SpriteSheetReader("res/images/BattleshipSpritesheet.png", 16, 16);
         try {
             tileSet = ssr.spriteSheetToArray();
         }
@@ -37,5 +42,17 @@ public class SpriteManager {
         indicatorTileSet[0] = tileSet[5];
         indicatorTileSet[1] = tileSet[4];
         indicatorTileSet[2] = tileSet[23];
+
+        fullShipSprites = new BufferedImage[5];
+    }
+
+    public BufferedImage[] getFullShipSprites() {
+        fullShipSprites[0] = ssr.getSpriteFromSheet(2, 0, 32, 16);
+        fullShipSprites[1] = ssr.getSpriteFromSheet(1, 0, 48, 16);
+        fullShipSprites[2] = ssr.getSpriteFromSheet(1, 3, 48, 16);
+        fullShipSprites[3] = ssr.getSpriteFromSheet(2, 2, 64, 16);
+        fullShipSprites[4] = ssr.getSpriteFromSheet(3, 0, 80, 16);
+
+        return fullShipSprites;
     }
 }
