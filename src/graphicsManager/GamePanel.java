@@ -8,11 +8,14 @@ import java.awt.Graphics2D;
 import javax.swing.JPanel;
 
 import gameLogic.Board;
+import gameLogic.GameStates;
 import gameLogic.Ship;
 import gameLogic.Ship.Rotation;
 import gameLogic.Ship.ShipType;
 
 import tile.TileManager;
+
+import static gameLogic.GameStates.*;
 
 public class GamePanel extends JPanel implements Runnable {
 	// -----------------
@@ -49,10 +52,17 @@ public class GamePanel extends JPanel implements Runnable {
 	TileManager tileM = new TileManager(this);
 	GUI gui = new GUI(this);
 
+	// The different game states for the game.
+	public GameStates gameState;
+
 	public GamePanel() {
-		this.setPreferredSize(new Dimension((int) (gui.getBoardCoverWidth() * spriteScaleMultiplier), (int) (gui.getBoardCoverHeight() * spriteScaleMultiplier)));
+		this.setPreferredSize(new Dimension((int) (gui.screenCoverWidth() * spriteScaleMultiplier), (int) (gui.screenCoverHeight() * spriteScaleMultiplier)));
 		this.setBackground(Color.black);
 		this.setDoubleBuffered(true);
+	}
+
+	public void setupGame() {
+		gameState = SHIP_PLACEMENT;
 	}
 
 	public void startGameThread() {
@@ -91,11 +101,16 @@ public class GamePanel extends JPanel implements Runnable {
 	}
 
 	public void update() {
-		playerBoard.addShip(new Ship(2, 2, ShipType.CARRIER, 0, Rotation.RIGHT));
-		playerBoard.addShip(new Ship(2, 5, ShipType.DESTROYER, 0, Rotation.DOWN));
-		compBoard.hit(2, 5);
-		playerBoard.miss(0, 0);
-		tileM.update();
+		if (gameState == GAMEPLAY) {
+			playerBoard.addShip(new Ship(2, 2, ShipType.CARRIER, 0, Rotation.RIGHT));
+			playerBoard.addShip(new Ship(2, 5, ShipType.DESTROYER, 0, Rotation.DOWN));
+			compBoard.hit(2, 5);
+			playerBoard.miss(0, 0);
+			tileM.update();
+		}
+		if (gameState == PAUSED) {
+			System.out.println("Game is Paused.");
+		}
 	}
 
 	public void paintComponent(Graphics g) {

@@ -1,11 +1,11 @@
 package gameLogic;
 
-public class GameState {
+public class TurnLogic {
     private int turnOrder;
     private final int PLAYER_TURN = 0;
     private final int COMPUTER_TURN = 1;
 
-    public GameState() {
+    public TurnLogic() {
 		turnOrder = 0;
     }
 

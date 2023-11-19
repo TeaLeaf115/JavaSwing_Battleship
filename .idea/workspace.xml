@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa86c4dc-4b85-41f0-a486-9749c85a469e" name="Changes" comment="Fixed the game board's GUI, and have started to add the beginnings for mouse interactions. This is the last WIP commit to the master branch.">
+    <list default="true" id="aa86c4dc-4b85-41f0-a486-9749c85a469e" name="Changes" comment="Started the basics for mouse interaction.">
+      <change afterPath="$PROJECT_DIR$/res/images/Pause_Image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gameLogic/GameStates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameLogic/PlayerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/PlayerAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/images/BattleshipSpritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/images/BattleshipSpritesheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/images/GUI_v1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/images/GUI_v1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/images/ShipPlacementScreen.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/images/ShipPlacementScreen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameLogic/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/TurnLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphicsManager/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicsManager/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphicsManager/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicsManager/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/SpriteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/SpriteManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/SpriteSheetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/SpriteSheetReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -127,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700014000606</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Started the basics for mouse interaction.">
+      <created>1700097868074</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700097868074</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,7 +146,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/work-in-progress" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -147,7 +170,8 @@
     <MESSAGE value="Snail." />
     <MESSAGE value="Added indication tiles (Hit player perspective, hit computer perspective) and miss, to the board." />
     <MESSAGE value="Fixed the game board's GUI, and have started to add the beginnings for mouse interactions. This is the last WIP commit to the master branch." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the game board's GUI, and have started to add the beginnings for mouse interactions. This is the last WIP commit to the master branch." />
+    <MESSAGE value="Started the basics for mouse interaction." />
+    <option name="LAST_COMMIT_MESSAGE" value="Started the basics for mouse interaction." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
