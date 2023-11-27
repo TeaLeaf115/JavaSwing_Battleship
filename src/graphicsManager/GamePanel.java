@@ -56,8 +56,8 @@ public class GamePanel extends JPanel implements Runnable {
 	public GameStates gameState;
 
 	public GamePanel() {
-		this.setPreferredSize(new Dimension((int) (gui.screenCoverWidth() * spriteScaleMultiplier), (int) (gui.screenCoverHeight() * spriteScaleMultiplier)));
-		this.setBackground(Color.black);
+		this.setPreferredSize(new Dimension((int) ((gui.screenCoverWidth() + 6*16) * spriteScaleMultiplier), (int) ((gui.screenCoverHeight() + 7*16) * spriteScaleMultiplier)));
+		this.setBackground(new Color(0x808080));
 		this.setDoubleBuffered(true);
 	}
 

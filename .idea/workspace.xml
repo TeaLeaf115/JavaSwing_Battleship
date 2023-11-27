@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa86c4dc-4b85-41f0-a486-9749c85a469e" name="Changes" comment="Started the basics for mouse interaction.">
-      <change afterPath="$PROJECT_DIR$/res/images/Pause_Image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gameLogic/GameStates.java" afterDir="false" />
+    <list default="true" id="aa86c4dc-4b85-41f0-a486-9749c85a469e" name="Changes" comment="Pause Button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/images/BattleshipSpritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/images/BattleshipSpritesheet.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/images/GUI_v1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/images/GUI_v1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/images/ShipPlacementScreen.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/images/ShipPlacementScreen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameLogic/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameLogic/TurnLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphicsManager/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicsManager/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphicsManager/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicsManager/GamePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +48,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -138,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700097868074</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Started to add Pause menu &amp; redid some artwork">
+      <created>1700434581160</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700434581160</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Pause Button">
+      <created>1700434610756</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700434610756</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,13 +174,16 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Created" />
     <MESSAGE value="Got rid of old unused class Grid.java" />
     <MESSAGE value="Snail." />
     <MESSAGE value="Added indication tiles (Hit player perspective, hit computer perspective) and miss, to the board." />
     <MESSAGE value="Fixed the game board's GUI, and have started to add the beginnings for mouse interactions. This is the last WIP commit to the master branch." />
     <MESSAGE value="Started the basics for mouse interaction." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started the basics for mouse interaction." />
+    <MESSAGE value="Started to add Pause menu &amp; redid some artwork" />
+    <MESSAGE value="Pause Button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pause Button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
